@@ -13,6 +13,22 @@
             <asp:Button ID="Button1" runat="server" Text="Get customer name using WCF" OnClick="Button1_Click" /><br /><br />
             <asp:Label ID="Label1" runat="server" Font-Bold="true" ForeColor="Red"></asp:Label>
         </div>
+
+        <div style="font-family:Arial">
+            
+            ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtID" runat="server" style="margin-bottom: 0px"></asp:TextBox>
+            <br />
+            Name<asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+            <br />
+            DOB&nbsp;
+            <asp:TextBox ID="txtDob" runat="server"></asp:TextBox>
+            <br />
+            <asp:Button ID="GetEmployee" runat="server" Text="Get Employee" OnClick="GetEmployee_Click" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="SaveEmployee" runat="server" Text="Save Employee" OnClick="SaveEmployee_Click" />
+            
+        </div>
     </form>
 </body>
 </html>

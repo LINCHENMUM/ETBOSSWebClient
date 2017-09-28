@@ -33,6 +33,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ETBOSSService" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IETBOSSService_GetCustomerName_InputMessage">
@@ -41,10 +42,30 @@
   <wsdl:message name="IETBOSSService_GetCustomerName_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCustomerNameResponse" />
   </wsdl:message>
+  <wsdl:message name="IETBOSSService_GetEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IETBOSSService_GetEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IETBOSSService_SaveEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IETBOSSService_SaveEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmployeeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IETBOSSService">
     <wsdl:operation name="GetCustomerName">
       <wsdl:input wsaw:Action="http://tempuri.org/IETBOSSService/GetCustomerName" message="tns:IETBOSSService_GetCustomerName_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IETBOSSService/GetCustomerNameResponse" message="tns:IETBOSSService_GetCustomerName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IETBOSSService/GetEmployee" message="tns:IETBOSSService_GetEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IETBOSSService/GetEmployeeResponse" message="tns:IETBOSSService_GetEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IETBOSSService/SaveEmployee" message="tns:IETBOSSService_SaveEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IETBOSSService/SaveEmployeeResponse" message="tns:IETBOSSService_SaveEmployee_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IETBOSSService" type="tns:IETBOSSService">
@@ -58,12 +79,48 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://tempuri.org/IETBOSSService/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployee">
+      <soap:operation soapAction="http://tempuri.org/IETBOSSService/SaveEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="NetTcpBinding_IETBOSSService" type="tns:IETBOSSService">
     <wsp:PolicyReference URI="#NetTcpBinding_IETBOSSService_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
     <wsdl:operation name="GetCustomerName">
       <soap12:operation soapAction="http://tempuri.org/IETBOSSService/GetCustomerName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap12:operation soapAction="http://tempuri.org/IETBOSSService/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmployee">
+      <soap12:operation soapAction="http://tempuri.org/IETBOSSService/SaveEmployee" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

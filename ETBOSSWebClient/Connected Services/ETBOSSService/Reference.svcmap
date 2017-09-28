@@ -22,6 +22,7 @@
     <MetadataSource Address="http://localhost:8080/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="81526f7b-e40a-4239-a004-922a15eaff4e" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd2" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="b42e560b-b696-4855-acf5-a029fa0f0f5b" SourceId="1" SourceUrl="http://localhost:8080/?disco" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="fa9d66aa-953b-499b-8777-cad24ec4b0e7" SourceId="1" SourceUrl="http://localhost:8080/?xsd=xsd0" />
     <MetadataFile FileName="ETBOSSService.wsdl" MetadataType="Wsdl" ID="722b4207-ebb5-47a6-ad2c-d71b5bdcd44d" SourceId="1" SourceUrl="http://localhost:8080/?wsdl" />
